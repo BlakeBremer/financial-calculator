@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+// Define is_palindrome() here:
+bool is_palindrome(std::string text){
+  std::string revText = "";
+  for(int x = text.length()-1; x >= 0; x--){
+    revText.push_back(text[x]);
+  }
+  if (text.compare(revText) != 0 || text!=revText){
+//    std::cout << "False!\n";
+    return false;
+    
+  } else if(text.compare(revText) == 0 || text==revText){
+//  	std::cout << "True!\n";
+  	return true;
+    
+  }
+}
+
+int main() {
+  
+  std::cout << is_palindrome("madam") << "\n";
+  std::cout << is_palindrome("ada") << "\n";
+  std::cout << is_palindrome("lovelace") << "\n";
+  
+}

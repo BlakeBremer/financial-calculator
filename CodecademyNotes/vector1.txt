@@ -1,0 +1,17 @@
+int main() {
+  std::vector<int> set = {1, 2, 3, 4, 5};
+  int sum = 0; //even
+  int product = 1; //odd
+  
+  for (int i=0; i < set.size(); i++) {
+    if (set[i]%2 != 0) { // if odd
+      product = product * set[i];
+    }
+    else {
+      sum = sum + set[i];
+    }
+  }
+  std::cout << "Sum of even numbers is " << sum << "\n";
+  std::cout << "Product of odd numbers is " << product << "\n";  
+  
+}

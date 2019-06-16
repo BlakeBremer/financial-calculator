@@ -1,0 +1,47 @@
+____Music.cpp____
+
+#include <iostream>
+#include "song.hpp"
+
+int main() {
+
+  Song electric_relaxation;
+  electric_relaxation.add_title("Electric Relaxation");
+  
+  std::cout << electric_relaxation.get_title() << "\n";
+  
+}
+
+
+____Song.hpp____
+
+#include <string>
+
+// add the Song class here:
+class Song {
+  
+  std::string title;
+
+public:
+  void add_title(std::string new_title);
+  std::string get_title();
+  
+};
+
+
+____Song.cpp____
+
+#include "song.hpp"
+
+// add Song method definitions here:
+void Song::add_title(std::string new_title) {
+
+  title = new_title;
+
+}
+
+std::string Song::get_title() {
+
+  return title;
+
+}

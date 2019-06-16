@@ -1,0 +1,56 @@
+____music.cpp____
+
+#include <iostream>
+#include "song.hpp"
+
+int main() {
+
+  Song back_to_black("Back to Black", "Amy Winehouse");
+    
+}
+
+____song.hpp____
+
+#include <string>
+
+class Song {
+  
+  std::string title;
+  std::string artist;
+
+public:
+  Song(std::string new_title, std::string new_artist);
+  // Add a destructor here:
+  ~Song();
+  
+  std::string get_title();
+  
+  std::string get_artist();
+  
+};
+
+____song.cpp____
+
+#include "song.hpp"
+#include <iostream>
+
+Song::Song(std::string new_title, std::string new_artist) 
+  : title(new_title), artist(new_artist) {}
+
+// add the Song destructor here:
+Song::~Song(){
+  std::cout << "Goodbye " << title << "!\n";
+}
+
+
+std::string Song::get_title() {
+
+  return title;
+
+}
+
+std::string Song::get_artist() {
+
+  return artist;
+
+}
